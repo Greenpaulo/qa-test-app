@@ -22,12 +22,20 @@
   label {
     padding: 0.3rem;
     font-size: 1.2rem;
+
+    &[for="cookies"] {
+      font-size: 0.9rem;
+    }
   }
 
   textarea {
     font-size: 1.2rem;
     width: 100%;
     border: 1px solid #ccc;
+  }
+
+  input[type="checkbox"] {
+    
   }
 
 }

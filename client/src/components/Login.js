@@ -37,6 +37,25 @@ class Login extends Component {
           <label htmlFor="password">Password</label><br />
           <input type="text" name="password" placeholder="Enter password..." id="password" required />
         </div>
+
+        {/* <div class="card"> */}
+          {/* <div class="checkbox-container"> */}
+            {/* <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom rectangular"></span>
+            </label> */}
+          {/* </div> */}
+        {/* </div> */}
+
+
+        <div className="animated fadeIn delay-custom1">
+          <label htmlFor="cookies" id="cookies-label">Accept Cookies? (Required)</label>
+          {/* <input type="checkbox" name="cookies" id="cookies" /> */}
+          <label class="checkbox-label">
+              <input type="checkbox" />
+              <span class="checkbox-custom rectangular"></span>
+          </label>
+        </div>
         <button type="submit" className="btn btn-primary shadow animated fadeIn delay-custom1" id="sign-up-btn" href="#" >Login</button>
         <p className="lead-small my-1 animated fadeIn delay-custom1">Forgot Password? <a className="text-primary animated-link" href="#" id="login-link">Reset</a></p>
       </form>
