@@ -9,21 +9,9 @@ class Navbar extends Component {
 
   // Helper method to show authenticated content
   renderLogin() {
-    switch (this.props.auth.user) {
-      // If we don't know yet, show nothing.
-      case null:
-        return;
-      // If the user isn't logged in - show the Login button
-      case false:
-        return (
-          <li className="login"><Link to="/login">Login</Link></li>
-          // <li className="login"><a href="/auth/google" onClick={this.handleClick}>Login with Google</a></li>
-        );
-      // Default is that they are logged in - show the Logout button
-      default:
-        return <li className="login"><Link href="/login">Login</Link></li>
-        // return <li className="login"><a href="/api/logout" onClick={this.handleClick}>Logout</a></li>
-    }
+    return (
+      <li className="login"><Link to="/login">Login</Link></li>
+    );
   }
 
   toggleDropdown = () => {

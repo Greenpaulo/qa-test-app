@@ -1,12 +1,9 @@
 import axios from 'axios';
-import { FETCH_USER, FETCH_CATEGORY, FETCH_HERB, FETCH_HERB_LIST, CREATE_MEDICINE, FETCH_MEDICINE_LIST, STORE_MEDICINE } from './types';
+import { FETCH_CATEGORY, FETCH_HERB, FETCH_HERB_LIST, CREATE_MEDICINE, FETCH_MEDICINE_LIST, STORE_MEDICINE, LOGIN_USER } from './types';
 
 // Action creator to check whether the user is logged in.
-export const fetchUser = () => {
-  return dispatch => {
-    axios.get('/api/current_user')
-      .then(res => { dispatch({ type: FETCH_USER, payload: res.data }) });
-  };
+export const loginUser = () => {
+  return {type: LOGIN_USER }
 };
 
 // Action creator to fetch the condition lists based on the category chosen.

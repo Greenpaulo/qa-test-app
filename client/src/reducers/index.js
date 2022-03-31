@@ -6,6 +6,7 @@ import herbListReducer from './herbListReducer';
 import createMedicineReducer from './createMedicineReducer';
 import fetchMedicinesReducer from './fetchMedicinesReducer';
 import storeMedicineReducer from './storeMedicineReducer';
+import loginReducer from './loginReducer';
 
 export default combineReducers({
   auth: authReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   herbList: herbListReducer,
   medicine: createMedicineReducer,
   medicineList: fetchMedicinesReducer,
-  storedMedicine: storeMedicineReducer
+  storedMedicine: storeMedicineReducer,
+  isLoggedIn: loginReducer
 });

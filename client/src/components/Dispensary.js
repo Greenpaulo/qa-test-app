@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import Footer from './Footer';
 import * as actions from '../actions';
 import uuid from 'uuid';
@@ -27,7 +27,19 @@ class Dispensary extends Component {
 
 
   render() {
-    return (
+    if (!(this.props.isLoggedIn)) {
+      return (
+        <div className="container" id="sign-up">
+          <h1 className="x-large text-primary"><i className="fas fa-lock animated bounce" id="lock" onClick={this.onLockClick}></i> The Dispensary Door Is Locked!</h1>
+          <div id="login-reason">
+            <p className="lead">In order to save your prescriptions and keep then secure - please Sign up/Login to use the Dispensary and Medicine Cabinet</p>
+          </div>
+          <Link to="/login" className="btn btn-primary shadow" id="sign-up-btn">Sign Up</Link>
+          <p className="lead">Already have an account? <Link to="/login" className="text-primary animated-link" id="login-link">Login</Link></p>
+        </div>
+      )
+    } else {
+      return (
       <Fragment>
         <section className="container" id="dispensary">
           <h1 className="x-large text-primary animated fadeInDown">Dispensary</h1>
@@ -191,7 +203,8 @@ class Dispensary extends Component {
         </section >
         <Footer />
       </Fragment >
-    )
+      )
+    }
   }
 }
 
@@ -217,13 +230,13 @@ const FormikDispensary = withFormik({
     };
   },
   handleSubmit(values, { props }) {
-    props.createMedicine(props.history, values);
+    console.error("Method POST does not exist")
   }
 
 })(Dispensary)
 
 const mapStateToProps = state => {
-  return { herbList: state.herbList }
+  return { herbList: state.herbList, isLoggedIn: state.isLoggedIn.isAuthenticated }
 }
 
 export default withRouter(connect(mapStateToProps, actions)(FormikDispensary));

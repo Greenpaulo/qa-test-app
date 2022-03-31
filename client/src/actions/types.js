@@ -5,3 +5,4 @@ export const FETCH_HERB_LIST = 'fetch_herb_list';
 export const CREATE_MEDICINE = 'create_medicine';
 export const FETCH_MEDICINE_LIST = 'fetch_medicine_list';
 export const STORE_MEDICINE = 'store_medicine';
+export const LOGIN_USER = 'login_user';
