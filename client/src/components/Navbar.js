@@ -16,12 +16,12 @@ class Navbar extends Component {
       // If the user isn't logged in - show the Login button
       case false:
         return (
-          <li className="login"><a href="#">Login with Google</a></li>
+          <li className="login"><Link to="/login">Login</Link></li>
           // <li className="login"><a href="/auth/google" onClick={this.handleClick}>Login with Google</a></li>
         );
       // Default is that they are logged in - show the Logout button
       default:
-        return <li className="login"><a href="#">Logout</a></li>
+        return <li className="login"><Link href="/login">Login</Link></li>
         // return <li className="login"><a href="/api/logout" onClick={this.handleClick}>Logout</a></li>
     }
   }
@@ -73,7 +73,7 @@ class Navbar extends Component {
             <li><Link to="/herb_finder">Herb Finder</Link></li>
             <li><Link to="/materia_medica">Materia Medica</Link></li>
             <li><Link to="/dispensary">Dispensary</Link></li>
-            <li><Link to="/cabinet">Medicine Cabinet</Link></li>
+            {/* <li><Link to="/cabinet">Medicine Cabinet</Link></li> */}
             <li><Link to="/about">About Us</Link></li>
             {this.renderLogin()}
           </ul>
@@ -87,7 +87,7 @@ class Navbar extends Component {
           <li><Link to="/herb_finder" onClick={this.handleClick}>Herb Finder</Link></li>
           <li><Link to="/materia_medica" onClick={this.handleClick}>Materia Medica</Link></li>
           <li><Link to="/dispensary" onClick={this.handleClick}>Dispensary</Link></li>
-          <li><Link to="/cabinet" onClick={this.handleClick}>Medicine Cabinet</Link></li>
+          {/* <li><Link to="/cabinet" onClick={this.handleClick}>Medicine Cabinet</Link></li> */}
           <li><Link to="/about" onClick={this.handleClick}>About Us</Link></li>
           {this.renderLogin()}
         </div>
