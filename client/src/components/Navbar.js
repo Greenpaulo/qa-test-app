@@ -62,7 +62,7 @@ class Navbar extends Component {
             <li><Link to="/materia_medica">Materia Medica</Link></li>
             <li><Link to="/dispensary">Dispensary</Link></li>
             <li><Link to="#">Medicine Cabinet</Link></li>
-            <li><Link to="/about">About Us</Link></li>
+            {/* <li><Link to="/about">About Us</Link></li> */}
             {this.renderLogin()}
           </ul>
           <div id="open-slide">
