@@ -1,0 +1,180 @@
+// Swirl Out Back
+.swirl-out-bck {
+	-webkit-animation: swirl-out-bck 0.6s ease-in both;
+	        animation: swirl-out-bck 0.6s ease-in both;
+}
+
+@-webkit-keyframes swirl-out-bck {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes swirl-out-bck {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+}
+
+// Slide Out Elliptic Top Back
+.slide-out-elliptic-top-bck {
+	-webkit-animation: slide-out-elliptic-top-bck 0.7s ease-in both;
+	        animation: slide-out-elliptic-top-bck 0.7s ease-in both;
+}
+
+@-webkit-keyframes slide-out-elliptic-top-bck {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-elliptic-top-bck {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+// Custom FadeIn (For the landing page)
+.fadeInLanding {
+  animation-name: fadeInLanding; 
+}
+
+@keyframes fadeInLanding {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.7;
+  }
+}
+
+// Scroll hint animations for Landing page
+// FadeUp
+.scrollDownAnimate {
+  animation: 
+    fadeInUpChevron 1s 3.5s ease-out forwards,
+    heartbeat 2s 5.5s ease-out infinite;
+  opacity: 0;
+}
+
+
+@keyframes fadeInUpChevron{
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Heartbeat
+@keyframes heartbeat {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+// Anchor tag underline animation
+.animated-link {
+    transition: all 0.2s ease-in;
+    position: absolute;
+
+    &:hover {
+    color: darken($primary-color, 10%);
+
+      &::after {
+        animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
+      }
+    }
+
+    &::after {
+      border-radius: 1em;
+      border-top: .1em solid $primary-color;
+      content:"";
+      position: absolute;
+        right: 100%;
+        bottom: .14em;
+        left: 0;
+      transition: right .4s cubic-bezier(0,.5,0,1);
+    }
+  }
+@keyframes anchor-underline {
+  0%, 10% {
+    left: 0;
+    right: 100%;
+  }
+  40%, 60% {
+    left: 0;
+    right: 0;
+  }
+  90%, 100% {
+    left: 100%;
+    right: 0;
+  }
+}
+
+// Glow
+@keyframes glow {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 
+      0 0 1px lighten($primary-color, 30%); 
+  }
+  
+  100% {
+    text-shadow: 
+    0 0 2px lighten($primary-color, 20%); 
+  }
+}
+
