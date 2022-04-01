@@ -52,7 +52,7 @@ class Landing extends Component {
         <div className="pimg2">
           <div className="ptext">
             <span className="border inside_head">
-              <Link to="/how_to_use">Herbal Medicine</Link>
+              <Link to="/">Herbal Medicine</Link>
             </span>
           </div>
         </div>
