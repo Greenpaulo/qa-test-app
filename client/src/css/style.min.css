@@ -1119,6 +1119,24 @@ section#condition-list a:hover {
   height: 350px;
 }
 
+#herb-id #dodgy-img {
+  border-radius: 50%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: image;
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  position: relative;
+  top: -17px;
+  right: 350px;
+}
+
+#herb-id #dodgy-img img {
+  height: 350px;
+}
+
 #reference-button {
   display: block;
   width: 100%;

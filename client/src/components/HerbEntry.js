@@ -150,9 +150,12 @@ class HerbEntry extends Component {
       })
     }
   }
-
+  
+  
+  
   render() {
     const { currentHerb } = this.props;
+    const dodgyImgs = ['LadysMantle', 'LemonBalm','Limeflowers', 'Lavender']
 
     return (
       <Fragment>
@@ -165,9 +168,17 @@ class HerbEntry extends Component {
               <h3 className="lead">Family: {currentHerb.family}</h3>
               <h3 className="lead">Parts Used: {currentHerb.partsUsed}</h3>
             </div>
-            <div id="herb-img" className="animated fadeInRight delay-custom2">
-              <img src={currentHerb.image} alt="Herb" />
-            </div>
+            {!dodgyImgs.includes(currentHerb.name) && 
+              <div id="herb-img" className="animated fadeInRight delay-custom2">
+                <img src={currentHerb.image} alt="Herb" />
+              </div>
+            }
+            {dodgyImgs.includes(currentHerb.name) && 
+              <div id="dodgy-img" className="animated fadeInRight delay-custom2">
+                <img src={currentHerb.image} alt="Herb" />
+              </div>
+            }
+
           </div>
 
           {this.renderActionsIndications()}

@@ -117,7 +117,7 @@ class Dispensary extends Component {
                 </label>
                 <label htmlFor="dosage2">
                   Dosage (ml)
-                  <Field type="number" name="dosage2" />
+                  <Field type="number" name="dosage2" disabled/>
                 </label>
               </div>
 

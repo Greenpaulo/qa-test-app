@@ -459,6 +459,20 @@ section#condition-list{
       height: 350px;
     }
   } 
+
+  #dodgy-img {
+    border-radius: 50%;
+    grid-area: image;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    top: -17px;
+    right: 350px;
+    img {
+      height: 350px;
+    }
+  }
 }
 
 #reference-button {

@@ -53,7 +53,7 @@ class MateriaMedica extends Component {
             <div className="dropdown">
               <button className="dropbtn shadow">E - H</button>
               <div className="dropdown-content">
-                {this.renderHerbSelect(15, 25)}
+                {/* {this.renderHerbSelect(15, 25)} */}
               </div>
             </div>
             <div className="dropdown">
