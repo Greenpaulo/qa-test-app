@@ -7,6 +7,10 @@ class Home extends Component {
     window.scrollTo(0, 0);
   }
 
+  notFoundError = () => {
+    console.error("500 Internal Server Error")
+  }
+
   render() {
     return (
       <Fragment>
@@ -41,7 +45,7 @@ class Home extends Component {
 
             <div id="grid" className="shadow">
               <div id="square1" className="bg-light">
-                <Link to='/herb_finder'><i className="fa fa-search fa-5x"></i>
+                <Link to='/herb_finder' onClick={this.notFoundError}><i className="fa fa-search fa-5x"></i>
                   <h3>The Herb Finder</h3>
                   <p className="">To begin your journey into herbal medicine navigate to the Herb Finder. Here you can search for herbs that treat a wide range of conditions</p>
                 </Link>
@@ -62,7 +66,7 @@ class Home extends Component {
               </div>
 
               <div id="square4" className="bg-light">
-                <Link to="/cabinet"><i className="fa fa-lock fa-5x"></i>
+                <Link to="/cabinet" onClick={this.notFoundError}><i className="fa fa-lock fa-5x"></i>
                   <h3>Medicine Cabinet</h3>
                   <p className="">The Medicine Cabinet is where you can safely store all your dispensed medicines. You can change your medicine if you wish, altering the ratios as needed, or adding new herbs as the treatment progresses.</p>
                 </Link>
