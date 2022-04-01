@@ -57,8 +57,8 @@ class Navbar extends Component {
         <nav className="navbar bg-dark">
           <a href="https://www.google.co.uk" className="logo">The Herbalist</a>
           <ul className="nav-links">
-            {/* <li><Link to="/how_to_use">How To Use</Link></li> */}
-            <li><Link to="/herb_finder">Herb Finder</Link></li>
+            <li><Link to="/how_to_use">How To Use</Link></li>
+            {/* <li><Link to="/herb_finder">Herb Finder</Link></li> */}
             <li><Link to="/materia_medica">Materia Medica</Link></li>
             <li><Link to="/dispensary">Dispensary</Link></li>
             <li><Link to="#">Medicine Cabinet</Link></li>
@@ -72,7 +72,7 @@ class Navbar extends Component {
 
         <div id="dropdown-nav" className="dropdown-nav bg-dark">
           <li><Link to="/how_to_use" onClick={this.handleClick}>How To Use</Link></li>
-          <li><Link to="/herb_finder" onClick={this.handleClick}>Herb Finder</Link></li>
+          {/* <li><Link to="/herb_finder" onClick={this.handleClick}>Herb Finder</Link></li> */}
           <li><Link to="/materia_medica" onClick={this.handleClick}>Materia Medica</Link></li>
           <li><Link to="/dispensary" onClick={this.handleClick}>Dispensary</Link></li>
           {/* <li><Link to="/cabinet" onClick={this.handleClick}>Medicine Cabinet</Link></li> */}

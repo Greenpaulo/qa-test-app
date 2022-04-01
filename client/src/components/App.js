@@ -6,12 +6,12 @@ import '../css/style.min.css'
 import Navbar from './Navbar';
 import HowToUse from './HowToUse';
 import Landing from './Landing';
-import Finder from './Finder';
+// import Finder from './Finder';
 import MateriaMedica from './MateriaMedica';
 import Dispensary from './Dispensary'
-import Cabinet from './Cabinet';
-import Edit from './EditMedicine';
-import PrivateRoute from './routing/PrivateRoute';
+// import Cabinet from './Cabinet';
+// import Edit from './EditMedicine';
+// import PrivateRoute from './routing/PrivateRoute';
 import Login from './Login';
 // import About from './About';
 import References from './References';
@@ -31,8 +31,8 @@ class App extends Component {
         <Fragment>
           <Route path='/' component={Navbar} />
           <Route exact path='/' component={Landing} />
-          {/* <Route path='/how_to_use' component={HowToUse} /> */}
-          <Route path='/herb_finder' component={Finder} />
+          <Route path='/how_to_use' component={HowToUse} />
+          {/* <Route path='/herb_finder' component={Finder} /> */}
           <Route exact path='/materia_medica' component={MateriaMedica} />
           <Route path='/materia_medica/:herb' component={MateriaMedica} />
           <Route path='/dispensary' component={Dispensary} />

@@ -31,7 +31,7 @@ class Landing extends Component {
         <div className="pimg1 animated fadeInLanding slow">
           <div className="ptext title">
             <span className="border trans">
-              <Link to="/" id="landing-logo" className="animated fadeIn delay-1s">The Herbalist</Link>
+              <Link to="/how_to_use" id="landing-logo" className="animated fadeIn delay-1s">The Herbalist</Link>
             </span>
           </div>
           <div id="scrollDown">
@@ -52,7 +52,7 @@ class Landing extends Component {
         <div className="pimg2">
           <div className="ptext">
             <span className="border inside_head">
-              <Link to="/">Herbal Medicine</Link>
+              <Link to="/how_to_use">Herbal Medicine</Link>
             </span>
           </div>
         </div>
@@ -86,7 +86,7 @@ class Landing extends Component {
         <div className="pimg1">
           <div className="ptext title">
             <span className="border trans">
-              <Link to="/">The Herbalist</Link>
+              <Link to="/how_to_use">The Herbalist</Link>
             </span>
           </div>
         </div>
